@@ -21,14 +21,9 @@
           <div class="hidden lg:flex lg:gap-x-12">
             <a href="{% url 'index' %}" class="text-sm font-semibold leading-6 text-gray-400">Inicio</a>
             <a href="{% url 'blog:list_view' %}" class="text-sm font-semibold leading-6 text-gray-400">Blog</a>
-            <a href="{% url 'contact' %}" class="text-sm font-semibold leading-6 text-gray-400">Contacto</a>
           </div>
-          <!-- href="https://wa.me/56997433966"
-          <img alt="Contact us" src="{% static 'whatsapp/WhatsAppButtonGreenMedium.svg' %}" /> -->
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-label="Contact us" href="https://wa.me/56997433966">
-              <img alt="Contact us" src="{% static 'whatsapp/WhatsAppButtonGreenMedium.svg' %}" />
-            </a>
+            <a href="{% url 'contact' %}" class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">Contacto</a>
           </div>
           <div class="flex lg:hidden">
             <button type="button" onclick="closeButton()" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
@@ -61,12 +56,9 @@
                   <div class="space-y-2 py-6">
                     <a href="{% url 'index' %}" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-400 hover:bg-gray-50">Inicio</a>
                     <a href="{% url 'blog:list_view' %}" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-400 hover:bg-gray-50">Blog</a>
-                    <a href="{% url 'contact' %}" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-400 hover:bg-gray-50">Contacto</a>
                   </div>
                   <div class="py-6">
-                    <a class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-label="Contact us" href="{% url 'contact' %}">
-                      <img alt="Contact us" src="{% static 'whatsapp/WhatsAppButtonGreenMedium.svg' %}" />
-                    </a>
+                    <a href="{% url 'contact' %}" class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">Contacto</a>
                   </div>
                 </div>
               </div>
