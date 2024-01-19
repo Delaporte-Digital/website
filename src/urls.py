@@ -22,5 +22,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('contact/', views.contact, name='contact'),
     path('blog/', include('blog.urls', namespace='blog')),
+    path('hedge/', include('hedge.urls', namespace='hedge')),
 ]
