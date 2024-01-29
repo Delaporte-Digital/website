@@ -4,9 +4,9 @@
 
 
 {% block content %}
-<h1>{{ post.title }}</h1>
-  <p class="date">
-    Published {{ post.publish }} by {{ post.author }}
-  </p>
-  {{ post.body|linebreaks }}
+<div class="bg-white px-6 py-32 lg:px-8">
+  <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+    {{ post.body|safe }}
+  </div>
+</div>
 {% endblock content %}

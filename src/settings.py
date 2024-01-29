@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'data.apps.DataConfig',
     'projects.apps.ProjectsConfig',
     'taggit',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
