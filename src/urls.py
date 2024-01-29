@@ -24,5 +24,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('contact/', views.contact, name='contact'),
     path('blog/', include('blog.urls', namespace='blog')),
-    path('hedge/', include('hedge.urls', namespace='hedge')),
+    path('data/', include('data.urls', namespace='data')),
+    path('projects/', include('projects.urls', namespace='projects')),
 ]

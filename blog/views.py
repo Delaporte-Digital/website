@@ -3,12 +3,17 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from taggit.models import Tag
 
 
 # Create your views here.
-def list_view(request):
+def post_list(request, tag_slug=None):
     # Pagination with 3 posts per page
     post_list = Post.published.all()
+    tag = None
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        post_list = post_list.filter(tags__in=[tag])
     paginator = Paginator(post_list, 3)
     page_number = request.GET.get('page', 1)
     try:
@@ -19,7 +24,7 @@ def list_view(request):
     except EmptyPage:
         # If page_number is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'blog/list.html', {'posts': posts})
+    return render(request, 'blog/list.html', {'posts': posts, 'tag': tag})
 
 
 from django.http import Http404

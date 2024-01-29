@@ -4,8 +4,8 @@ from django.urls import path
 from . import views
 
 
-app_name = 'hedge'
+app_name = 'data'
 
 urlpatterns = [
-    path('', views.hedge, name='hedge'),
+    path('', views.data, name='data'),
 ]

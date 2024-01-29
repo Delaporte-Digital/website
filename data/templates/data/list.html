@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method="post">
+    {% csrf_token %}
+    {{ search_form.as_p }}
+    <input type="submit" value="Submit">
+</form>  
+
+
+{{ data }}
+
+{% endblock content %}

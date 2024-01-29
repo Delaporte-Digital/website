@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'hedge',
+    'data.apps.DataConfig',
+    'projects.apps.ProjectsConfig',
+    'taggit',
 ]
 
 MIDDLEWARE = [
