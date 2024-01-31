@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import requests
+from django.http import JsonResponse
 
 from .forms import SearchForm
 
@@ -14,7 +15,7 @@ def data(request):
         if search_form.is_valid():
             url = "https://crunchbase-crunchbase-v1.p.rapidapi.com/autocompletes"
 
-            querystring = search_form.cleaned_data['search']
+            querystring = {"query": search_form.cleaned_data['search']}
             # querystring = {"query": request.get('search')}
             print("-------------",querystring)
 
@@ -26,7 +27,7 @@ def data(request):
             response = requests.get(url, headers=headers, params=querystring)
 
             print(response)
-            return render(request, 'data/list.html', {'data': response})
+            return JsonResponse(response.json())
     else:
         search_form = SearchForm()
     return render(request, 'data/list.html', {'search_form': search_form})

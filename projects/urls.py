@@ -8,4 +8,5 @@ app_name = 'projects'
 
 urlpatterns = [
     path('', views.projects_list, name='projects_list'),
+    path('lipiam/', views.lipiam, name='lipiam'),
 ]
