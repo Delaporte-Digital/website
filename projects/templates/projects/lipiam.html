@@ -1,4 +1,7 @@
+{% extends 'base.html' %}
+
 {% load static %}
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,36 +9,87 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>Lipiam</title>
-
-		<link rel="stylesheet" href="{% static 'revealjs/dist/reset.css' %}">
+{% block style %}
+<link rel="stylesheet" href="{% static 'revealjs/dist/reset.css' %}">
 		<link rel="stylesheet" href="{% static 'revealjs/dist/reveal.css' %}">
 		<link rel="stylesheet" href="{% static 'revealjs/dist/theme/black.css' %}">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="{% static 'revealjs/plugin/highlight/monokai.css' %}">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+{% endblock style %}
 
-		<script src="{% static 'revealjs/dist/reveal.js' %}"></script>
-		<script src="{% static 'revealjs/plugin/notes/notes.js' %}"></script>
-		<script src="{% static 'revealjs/plugin/markdown/markdown.js' %}"></script>
-		<script src="{% static 'revealjs/plugin/highlight/highlight.js' %}"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
-</html>
+{% block content %}
+<div class="reveal">
+    <div class="slides">
+        <section>Lipiam
+            <section>Servicios Profesionales</section>
+            <section>Servicios Profesionales</section>
+        </section>
+        <section>
+            <section>Problem</section>
+            <section>Problem</section>
+        </section>
+        <section>Solution: Remote Professional Services</section>
+        <section>Demo: Embed Project</section>
+        <section>Market Analysis
+            <section data-auto-animate="running" data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)" style="top: 145.5px; display: block;" class="present">
+                <div class="r-stack">
+                    <div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;" data-auto-animate-target="39"><h6>TAM</h6></div>
+                    <div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;" data-auto-animate-target="40"><h6>SAM</h6></div>
+                    <div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;" data-auto-animate-target="41"><h6>SOM</h6></div>
+                </div>
+                <table class="min-w-full divide-y divide-gray-300">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-500 sm:pl-0">Total Addressable Market (TAM)</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-500">Serviceable Addressable Market (SAM)</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-500">Serviceable Obtainable Market (SOM)</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                      <tr>
+                        <td class="whitespace-nowrap py-4 pl-4 text-sm text-gray-500">Lindsay Walton</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Front-end Developer</td>
+                        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">lindsay.walton@example.com</td>
+                      </tr>
+          
+                      <!-- More people... -->
+                    </tbody>
+                  </table>
+                  
+            </section>
+            <section data-auto-animate="pending" data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)" style="top: 235.5px; display: block;" class="past" hidden="" aria-hidden="true">
+                <div class="r-hstack justify-center">
+                    <div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;" data-auto-animate-target=""></div>
+                    <div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;" data-auto-animate-target=""></div>
+                    <div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;" data-auto-animate-target=""></div>
+                </div>
+                <h2 style="margin-top: 20px;" data-auto-animate-target="">Auto-Animate</h2>
+        </section>
+        </section>
+        <section>Go-to-market</section>
+        <section>Growth</section>
+        <section>Team</section>
+        <section>Finantial Structure</section>
+        <section data-background-iframe="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSGoRSHAPOflvMM7QsZBtytdhDUAzRqgUtwDffncT6MO83MGjdd3MWeZ0xIpAeUQ/pubhtml?widget=true&amp;headers=false" data-background-interactive></section>
+        <section>The asking</section>
+    </div>
+</div>
+
+<script src="{% static 'revealjs/dist/reveal.js' %}"></script>
+<script src="{% static 'revealjs/plugin/notes/notes.js' %}"></script>
+<script src="{% static 'revealjs/plugin/markdown/markdown.js' %}"></script>
+<script src="{% static 'revealjs/plugin/highlight/highlight.js' %}"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+</script>
+{% endblock content %}

@@ -26,4 +26,5 @@ urlpatterns = [
     path('blog/', include('blog.urls', namespace='blog')),
     path('data/', include('data.urls', namespace='data')),
     path('projects/', include('projects.urls', namespace='projects')),
+     path('macro/', include('macro.urls', namespace='macro')),
 ]

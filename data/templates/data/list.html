@@ -1,15 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<input type="text" id="searchInput">
+<button id="searchButton">Search</button> 
 
 
-<form method="post">
-    {% csrf_token %}
-    {{ search_form.as_p }}
-    <input type="submit" value="Submit">
-</form>  
+<div id="searchResults"></div>
 
-
-{{ data }}
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#searchButton').click(function () {
+                var query = $('#searchInput').val();
+                $.ajax({
+                    url: "https://crunchbase-crunchbase-v1.p.rapidapi.com/autocompletes", // URL to your Django view
+                    type: 'GET',
+                    data: {'query': query},
+                    headers: {
+                        "X-RapidAPI-Key": "19dac50c41msh49cc51a67fbc00ap1f76b4jsnddde907b1e2b",
+                        "X-RapidAPI-Host": "crunchbase-crunchbase-v1.p.rapidapi.com"
+                    },
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+</script>
 {% endblock content %}
