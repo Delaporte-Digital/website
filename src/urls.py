@@ -21,10 +21,14 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('contact/', views.contact, name='contact'),
+    path('account/', include('account.urls', namespace='account')),
     path('blog/', include('blog.urls', namespace='blog')),
     path('data/', include('data.urls', namespace='data')),
     path('projects/', include('projects.urls', namespace='projects')),
-     path('macro/', include('macro.urls', namespace='macro')),
+    path('macro/', include('macro.urls', namespace='macro')),
+    path('accounts/', include("django.contrib.auth.urls")),
+    path('reports/',include('reports.urls', namespace='reports')),
+    path('contact/', views.contact, name='contact'),
+    path('team/', views.team, name='team'),
+    path('', views.index, name='index'),
 ]

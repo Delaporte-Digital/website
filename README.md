@@ -52,3 +52,10 @@ Delaporte Digital entrega una alternativa a filántropos que quieran contribuir 
 - [ ] Project presentation
 - [ ] Change content language to english
 - [ ] Finish website content
+
+
+
+
+
+
+
